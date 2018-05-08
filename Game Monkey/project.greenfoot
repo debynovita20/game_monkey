@@ -1,0 +1,20 @@
+#Greenfoot properties
+#Tue May 08 13:05:48 AWST 2018
+class.Counter.superclass=greenfoot.Actor
+project.charset=UTF-8
+mainWindow.height=600
+version=3.0.0
+class.Monkey.image=onye.png
+class.bom.superclass=Objek
+class.Objek.superclass=greenfoot.Actor
+class.Monkey.superclass=Objek
+world.lastInstantiated=Paper
+class.Score.superclass=greenfoot.Actor
+class.banana.image=banana.png
+mainWindow.y=40
+mainWindow.x=40
+class.Paper.image=Background.png
+class.bom.image=bom.png
+class.Paper.superclass=greenfoot.World
+mainWindow.width=850
+class.banana.superclass=Objek
