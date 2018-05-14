@@ -17,16 +17,16 @@ public class Paper extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        BananaAppear();//method BananaAppear
-        prepare();//method prepare
-        BomAppear();//method BomAppear
+        bananaAppear();
+        prepare();
+        bomAppear();
     }
-    public void act()//method act
+    public void act()
     {
-        if (getObjects(Banana.class).isEmpty()) BananaAppear();
-        if (getObjects(Bom.class).isEmpty()) BomAppear();
+        if (getObjects(banana.class).isEmpty()) bananaAppear();
+        if (getObjects(bom.class).isEmpty()) bomAppear();
     }
-    private void prepare()//method prepare untuk menentukan posisi dari kelas objek masing-masing
+    private void prepare()
     {
         Monkey monkey = new Monkey();
         addObject (monkey, 648, 403);
@@ -37,20 +37,20 @@ public class Paper extends World
         score.setLocation(59, 44);
         monkey.setLocation(300, 350);
     }
-    public void BananaAppear() //method BananaAppear
+    public void bananaAppear()
     {
         if(Greenfoot.getRandomNumber(2) < 50)
         {
-            addObject(new Banana(),
+            addObject(new banana(),
 Greenfoot.getRandomNumber(519),20);
         }
     }
     
-    public void BomAppear() //method BomAppear
+    public void bomAppear()
     {
         if(Greenfoot.getRandomNumber(2) <50)
         {
-            addObject(new Bom(),
+            addObject(new bom(),
 Greenfoot.getRandomNumber(519), 21);
         }
     }
