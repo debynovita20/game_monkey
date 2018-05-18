@@ -12,12 +12,13 @@ public class Monkey extends Objek
      * Act - do whatever the Monkey wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
+    public void act() 
     {
         moveMonkey();
-        objectDisappear();
-    }
-    public void objectDisappear()
+        objectDissapear();
+        // Add your action code here.
+    }    
+    public void objectDissapear()
     {
         if (canSee(Banana.class))
         {
@@ -36,8 +37,5 @@ public class Monkey extends Objek
         {
             move(7);
         }
-    {
-        // Add your action code here.
-    }  
-}
+    }
 }

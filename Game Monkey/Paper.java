@@ -16,15 +16,15 @@ public class Paper extends World
     public Paper()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
-        bananaAppear();
+        super(720, 480, 1);
+        BananaAppear();
+        BomAppear();
         prepare();
-        bomAppear();
     }
     public void act()
     {
-        if (getObjects(banana.class).isEmpty()) bananaAppear();
-        if (getObjects(bom.class).isEmpty()) bomAppear();
+        if (getObjects(Banana.class).isEmpty()) BananaAppear();
+        if (getObjects(Bom.class).isEmpty()) BomAppear();
     }
     private void prepare()
     {
@@ -32,26 +32,32 @@ public class Paper extends World
         addObject (monkey, 648, 403);
         Counter counter = new Counter();
         addObject(counter, 57, 69);
-        Score score = new Score();
-        addObject(score, 64, 44);
-        score.setLocation(59, 44);
-        monkey.setLocation(300, 350);
+        skor skor = new skor();
+        addObject(skor, 64, 44);
+        skor.setLocation(59, 44);
+        monkey.setLocation(373, 403);
     }
-    public void bananaAppear()
+    public void BananaAppear()
     {
         if(Greenfoot.getRandomNumber(2) < 50)
         {
-            addObject(new banana(),
-Greenfoot.getRandomNumber(519),20);
+            addObject(new Banana(), Greenfoot.getRandomNumber(519),20);
         }
     }
     
-    public void bomAppear()
+    public void BomAppear()
     {
         if(Greenfoot.getRandomNumber(2) <50)
         {
-            addObject(new bom(),
-Greenfoot.getRandomNumber(519), 21);
+            addObject(new Bom(), Greenfoot.getRandomNumber(519), 21);
         }
+    }
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
     }
 }

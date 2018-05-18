@@ -14,6 +14,22 @@ public class Bom extends Objek
      */
     public void act() 
     {
+        {
+            setLocation(getX(), getY()+5);
+            Boming();
+        }
+    }
+    public void Boming()
+    {
+        if (canSee(Monkey.class))
+        {
+((Counter)getWorld().getObjects(Counter.class).get(0)).Counting(-1);
+            Greenfoot.playSound("boom.wav");
+        }
+        if (atWorldEdge())
+        {
+            getWorld().removeObject(this);
+        }
         // Add your action code here.
     }    
 }
