@@ -16,7 +16,7 @@ public class Paper extends World
     public Paper()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(720, 480, 1);
+        super(600, 400, 1);
         BananaAppear();
         BomAppear();
         prepare();
@@ -35,7 +35,7 @@ public class Paper extends World
         skor skor = new skor();
         addObject(skor, 64, 44);
         skor.setLocation(59, 44);
-        monkey.setLocation(373, 403);
+        monkey.setLocation(280, 280);
     }
     public void BananaAppear()
     {
@@ -53,11 +53,4 @@ public class Paper extends World
         }
     }
 
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
-    }
 }
